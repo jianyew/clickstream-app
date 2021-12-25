@@ -1,0 +1,176 @@
+﻿{
+  "paragraphs": [
+    {
+      "text": "%flink.pyflink\n\nst_env.get_config().get_configuration().set_string(\n    \"execution.checkpointing.mode\", \"EXACTLY_ONCE\"    \n)\n\nst_env.get_config().get_configuration().set_string(\n    \"execution.checkpointing.interval\", \"1min\" \n)",
+      "user": "anonymous",
+      "dateUpdated": "2021-12-23T06:32:28+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "<pyflink.common.configuration.Configuration at 0x7f4ad82c83d0>"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1640224511761_1528575298",
+      "id": "paragraph_1634227069840_426479799",
+      "dateCreated": "2021-12-23T01:55:11+0000",
+      "dateStarted": "2021-12-23T06:32:28+0000",
+      "dateFinished": "2021-12-23T06:32:29+0000",
+      "status": "FINISHED",
+      "focus": true,
+      "$$hashKey": "object:2126"
+    },
+    {
+      "text": "%flink.ssql(type=update)\n\nINSERT INTO click_s3_table SELECT * FROM click_kinesis_table\n\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-12-23T06:35:04+0000",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "sql",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12,
+        "editorMode": "ace/mode/sql",
+        "fontSize": 9,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "FLINK JOB",
+          "tooltip": "View in Flink web UI",
+          "group": "flink",
+          "values": [
+            {
+              "jobUrl": "/flinkdashboard/#/job/3f91dd332acb5cadc353e60ab06c7b0a",
+              "$$hashKey": "object:2307"
+            }
+          ],
+          "interpreterSettingId": "flink"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1640224511762_51818726",
+      "id": "paragraph_1634227110486_612110229",
+      "dateCreated": "2021-12-23T01:55:11+0000",
+      "dateStarted": "2021-12-23T06:35:04+0000",
+      "dateFinished": "2021-12-23T06:33:49+0000",
+      "status": "RUNNING",
+      "$$hashKey": "object:2127"
+    },
+    {
+      "text": "%flink.ssql\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-12-23T06:32:58+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1640241178711_561476193",
+      "id": "paragraph_1640241178711_561476193",
+      "dateCreated": "2021-12-23T06:32:58+0000",
+      "status": "READY",
+      "$$hashKey": "object:2128"
+    },
+    {
+      "text": "%flink.ssql\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-12-23T01:55:11+0000",
+      "progress": 0,
+      "config": {
+        "colWidth": 12,
+        "fontSize": 9,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1640224511762_1100167977",
+      "id": "paragraph_1640187327660_792532427",
+      "dateCreated": "2021-12-23T01:55:11+0000",
+      "status": "READY",
+      "$$hashKey": "object:2129"
+    }
+  ],
+  "name": "click_app_deployable_1.13 1",
+  "id": "2GPR1UD72",
+  "defaultInterpreterGroup": "flink",
+  "version": "0.9.0",
+  "noteParams": {
+    "kda.deploy-as-application.s3-object": "s3://kevin-studio-notebook-deploy/checkdata/zeppelin-code/checkdata-click_app_deployable_1.13_1-2GPR1UD72-2021-12-23T05:23:36.042111Z.zip",
+    "kda.deploy-as-application.app-name": "checkdata-click_app_deployable_1.13_1-2GPR1UD72",
+    "kda.deploy-as-application.latest-build": 1640237024467
+  },
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false,
+    "looknfeel": "default",
+    "personalizedMode": "false"
+  },
+  "info": {
+    "isRunning": false
+  },
+  "path": "/click_app_deployable_1.13 1"
+}
