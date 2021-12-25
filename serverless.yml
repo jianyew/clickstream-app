@@ -1,0 +1,29 @@
+service: click-app
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: dev
+  region: ap-southeast-1
+  memorySize: 128
+  architecture: arm64
+  httpApi:
+    cors: true
+
+#  iam:
+#    role: arn:aws:iam::${AWS::AccountId}:role/click-app-dev-ap-southeast-1-lambdaRole
+#  iam:
+#    deploymentRole:
+#      Fn::Sub: 'arn:aws:iam::${AWS::AccountId}:role/click-app-dev-ap-southeast-1-lambdaRole'
+
+functions:
+  app:
+    handler: app/app.handler
+    events:
+      - httpApi:
+          path: /
+          method: ANY
+          cors: true
+      - httpApi:
+          path: /{proxy+}
+          method: ANY
+          cors: true
